@@ -6,8 +6,8 @@
     <title>Invitación - Cumpleaños de Javi y Salma</title>
     <link rel="stylesheet" href="style.css">
     
-    <!-- Carga la librería de EmailJS -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- Carga la nueva versión de EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!-- Carga tu script.js después de la librería -->
     <script defer src="script.js"></script>
@@ -21,7 +21,15 @@
         <h2>Estás invitado a la celebración de nuestro cumpleaños</h2>
         <div id="countdown"></div>
         <div id="map">
-            <iframe src="https://www.google.com/maps?q=C.+del+Mar,+27,+03130+Santa+Pola,+Alicante&output=embed"></iframe>
+            <iframe 
+                width="600" 
+                height="450" 
+                style="border:0" 
+                loading="lazy" 
+                allowfullscreen 
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDSVUItailXCLNG3SDQYY1XPM7olmOK6AQ&q=C.+del+Mar,+27,+03130+Santa+Pola,+Alicante">
+            </iframe>
         </div>
         <p>Se ruega a los invitados confirmar asistencia</p>
         <button id="menuButton">Menú y Confirmación</button>
