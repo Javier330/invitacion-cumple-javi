@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmForm = document.getElementById("confirmForm");
 
     // Inicializa EmailJS con la Public Key
-    emailjs.init("H_lhlYdNYIveOttBf");
+    emailjs.init("JL-BnIYhSYyI30-lZ");
 
     // Animación de inicio al hacer clic en la pantalla
     introScreen.addEventListener("click", function () {
