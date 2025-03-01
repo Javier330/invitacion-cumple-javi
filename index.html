@@ -6,16 +6,10 @@
     <title>Invitación - Cumpleaños de Javi y Salma</title>
     <link rel="stylesheet" href="style.css">
     
-    <!-- Incluye la librería de EmailJS -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function(){
-          // Reemplaza "public_ABC123" por tu public key de EmailJS
-          emailjs.init("H_lhlYdNYIveOttBf");
-      })();
-    </script>
+    <!-- Carga la librería de EmailJS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-    <!-- Tu script.js se carga de forma diferida -->
+    <!-- Carga tu script.js después de la librería -->
     <script defer src="script.js"></script>
 </head>
 <body>
@@ -54,7 +48,6 @@
                 <option value="Rebe">Rebe</option>
                 <option value="Ari">Ari</option>
                 <option value="Cristian">Cristian</option>
-                <!-- Aquí se agregarán los nombres manualmente -->
             </select>
             <label><input type="checkbox" id="attend"> Sí asisto</label>
             <label><input type="checkbox" id="notAttend"> No asisto</label>
