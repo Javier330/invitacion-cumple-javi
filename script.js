@@ -7,9 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmButton = document.getElementById("confirmButton");
     const confirmForm = document.getElementById("confirmForm");
 
+    // Inicializa EmailJS con la Public Key
+    emailjs.init("H_lhlYdNYIveOttBf");
+
     // Animación de inicio al hacer clic en la pantalla
     introScreen.addEventListener("click", function () {
-        console.log("Se hizo clic en la pantalla de introducción"); // Línea agregada
+        console.log("Se hizo clic en la pantalla de introducción");
         introScreen.classList.add("hidden");
         mainScreen.classList.remove("hidden");
     });
@@ -78,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Reemplaza "service_id" y "template_id" por los identificadores que te proporciona EmailJS
         emailjs.send("service_iapile1", "template_7zo7f0w", {
             nombre: name,
             asistencia: attend ? "Sí asisto" : "No asisto",
@@ -87,13 +89,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }).then(function () {
             alert("Confirmación enviada");
             confirmScreen.classList.add("hidden");
-            if (attend) {
-                document.body.innerHTML = "<h2>¡Gracias por asistir!</h2><button onclick='addToCalendar()'>Agregar al calendario</button>";
-            } else {
-                document.body.innerHTML = "<h2>Lamentamos que no puedas asistir, pero ya iremos hablando.</h2>";
-            }
-        }, function (error) {
-            alert("Error al enviar confirmación: " + error);
+            document.body.innerHTML = attend
+                ? "<h2>¡Gracias por asistir!</h2><button onclick='addToCalendar()'>Agregar al calendario</button>"
+                : "<h2>Lamentamos que no puedas asistir, pero ya iremos hablando.</h2>";
+        }).catch(function (error) {
+            alert("Error al enviar confirmación: " + JSON.stringify(error));
         });
     });
 });
