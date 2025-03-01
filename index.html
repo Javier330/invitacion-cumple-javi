@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación - Cumpleaños de Javi y Salma</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="intro" class="screen">
+        <h1>Cumpleaños de Javi y Salma</h1>
+    </div>
+    
+    <div id="main" class="screen hidden">
+        <h2>Estás invitado a la celebración de nuestro cumpleaños</h2>
+        <div id="countdown"></div>
+        <div id="map">
+            <iframe src="https://www.google.com/maps?q=C.+del+Mar,+27,+03130+Santa+Pola,+Alicante&output=embed"></iframe>
+        </div>
+        <p>Se ruega a los invitados confirmar asistencia</p>
+        <button id="menuButton">Menú y Confirmación</button>
+    </div>
+    
+    <div id="menu" class="screen hidden">
+        <h2>Menú de la noche</h2>
+        <p><strong>Entrantes:</strong> Nachos con guacamole y queso camembert, patatas fritas y frutos secos.</p>
+        <p><strong>Principal (Pizza):</strong> Jamón y queso, 4 quesos, pollo y bacon, pepperoni y carbonara.</p>
+        <p><strong>Postre:</strong> Tarta de cumpleaños.</p>
+        <p><strong>Bebidas:</strong> Cerveza, Fanta, Coca Cola y agua.</p>
+        <p><strong>Alcohol:</strong> Red Label, Ginebra rosa, Ron Barceló y Tequifresi.</p>
+        <p><strong>Desayuno:</strong> Café y leche con Colacao (solo para los que se quedan a dormir).</p>
+        <button id="confirmButton">Confirmación</button>
+    </div>
+    
+    <div id="confirm" class="screen hidden">
+        <h2>Confirmar Asistencia</h2>
+        <form id="confirmForm">
+            <label for="name">Nombre:</label>
+            <select id="name" required>
+                <option value="">Selecciona tu nombre</option>
+                <!-- Aquí se agregarán los nombres manualmente -->
+            </select>
+            <label><input type="checkbox" id="attend"> Sí asisto</label>
+            <label><input type="checkbox" id="notAttend"> No asisto</label>
+            <div id="stayOption" class="hidden">
+                <label><input type="checkbox" id="stay"> Me quedo a dormir</label>
+            </div>
+            <label for="message">Mensaje opcional:</label>
+            <textarea id="message"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
