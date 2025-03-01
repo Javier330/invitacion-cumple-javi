@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Reemplaza "service_id" y "template_id" por los identificadores que te proporciona EmailJS
-        emailjs.send("service_iapile1", "template_annuo8a", {
+        emailjs.send("service_iapile1", "template_7zo7f0w", {
             nombre: name,
             asistencia: attend ? "Sí asisto" : "No asisto",
             se_queda: stay ? "Sí" : "No",
