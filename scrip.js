@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const introScreen = document.getElementById("intro");
+    const introScreen = document.querySelector(".screen.intro");
     const mainScreen = document.getElementById("main");
     const menuScreen = document.getElementById("menu");
     const confirmScreen = document.getElementById("confirm");
