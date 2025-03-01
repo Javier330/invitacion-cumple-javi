@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmButton = document.getElementById("confirmButton");
     const confirmForm = document.getElementById("confirmForm");
 
-    // Inicializa EmailJS con la Public Key
-    emailjs.init("pe0HH4JvV48GzrFjn");
+    // Inicializa EmailJS con la Public Key (Nueva versión)
+    emailjs.init({ publicKey: "pe0HH4JvV48GzrFjn" });
 
     // Animación de inicio al hacer clic en la pantalla
     introScreen.addEventListener("click", function () {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     countdown();
 
-    // Enviar formulario con EmailJS
+    // Enviar formulario con EmailJS (Nueva versión)
     confirmForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
