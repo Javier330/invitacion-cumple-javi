@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación - Cumpleaños de Javi y Salma</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Incluye la librería de EmailJS -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+          // Reemplaza "public_ABC123" por tu public key de EmailJS
+          emailjs.init("TycWSoHTZSMdoRG_x");
+      })();
+    </script>
+
+    <!-- Tu script.js se carga de forma diferida -->
     <script defer src="script.js"></script>
 </head>
 <body>
