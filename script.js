@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Animación de inicio al hacer clic en la pantalla
     introScreen.addEventListener("click", function () {
+        console.log("Se hizo clic en la pantalla de introducción"); // Línea agregada
         introScreen.classList.add("hidden");
         mainScreen.classList.remove("hidden");
     });
@@ -77,7 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        emailjs.send(andreumatasjavi@gmail.com {
+        // Reemplaza "service_id" y "template_id" por los identificadores que te proporciona EmailJS
+        emailjs.send("service_id", "template_id", {
             nombre: name,
             asistencia: attend ? "Sí asisto" : "No asisto",
             se_queda: stay ? "Sí" : "No",
